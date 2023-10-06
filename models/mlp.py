@@ -20,7 +20,7 @@ class MLP(nn.Module):
             self.fc_3 = nn.Linear(hidden_dim, out_dim, bias=False)
             self.reset_parameters()
         elif self.param == "sp":
-            self.reset_parameters()
+            self.fc_3 = nn.Linear(hidden_dim, out_dim, bias=False)
         else:
             raise NotImplementedError
 
